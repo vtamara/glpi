@@ -4486,9 +4486,11 @@ JAVASCRIPT;
       TemplateRenderer::getInstance()->display('components/itilobject/layout.html.twig', [
          'item'     => $this,
          'followup' => new ITILFollowup,
+         'solution' => new ITILSolution,
          'params'   => $options,
          'timeline' => $this->getTimelineItems(),
          'template' => $tt,
+         'ticket_ticket' => new Ticket_Ticket,
       ]);
 
       return true;
